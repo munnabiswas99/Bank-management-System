@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 public class Login extends JFrame implements ActionListener{
-    JButton login,clear,singup;
+    JButton login,clear,signup;
     JTextField card_field;
     JPasswordField pin_field;
     Login(){
@@ -70,12 +70,12 @@ public class Login extends JFrame implements ActionListener{
         clear.setForeground(Color.WHITE);
         clear.addActionListener(this);
         
-        singup = new JButton("singup");
-        singup.setBounds(300,340,200,25);
-        add(singup);
-        singup.setBackground(Color.BLACK);
-        singup.setForeground(Color.WHITE);
-        clear.addActionListener(this);
+        signup = new JButton("singup");
+        signup.setBounds(300,340,200,25);
+        add(signup);
+        signup.setBackground(Color.BLACK);
+        signup.setForeground(Color.WHITE);
+        signup.addActionListener(this);
         
         setVisible(true);
 
@@ -90,8 +90,9 @@ public class Login extends JFrame implements ActionListener{
         else if(ae.getSource() == login){
             
         }
-        else if(ae.getSource() == singup){
-            
+        else if(ae.getSource() == signup){
+          setVisible(false);
+          new SignupOne().setVisible(true);
         }
     }
 //    main Method
